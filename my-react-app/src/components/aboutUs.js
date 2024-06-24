@@ -4,18 +4,18 @@ import './aboutUs.css';
 const AboutUs = () => (
   <div className="about-container">
     <h1>About Us</h1>
-    <p>Welcome to Sweet Delights Bakery! We are a family-owned bakery 
+    <p>Welcome to  Faith's confidentionery bakery!.We are a family-owned bakery 
       dedicated to bringing you the finest baked goods made from the
        highest quality ingredients. Our passion for baking shines through
         in every item we create, from our freshly baked bread to our delectable pastries and cakes.</p>
     
     <h2>Our Services</h2>
     <ul>
-      <li>Freshly baked bread and rolls</li>
-      <li>Wide variety of pastries and desserts</li>
-      <li>Custom cakes for all occasions</li>
-      <li>Catering services for events</li>
-      <li>Specialty coffee and tea</li>
+      <li>Birthday Cakes</li>
+      <li>Graduation Cakes</li>
+      <li>Wedding Cakes</li>
+      <li>Anniversary Cakes</li>
+      <li>Baby Shower Cakes</li>
     </ul>
     
     <h2>Hours of Operation</h2>
@@ -27,7 +27,7 @@ const AboutUs = () => (
     </ul>
     
     <h2>Our Story</h2>
-    <p>Founded in 2010, Sweet Delights Bakery has been a beloved part
+    <p>Founded in 2014, Faith's confidentionery bakery has been a beloved part
        of the Sweetville community. Our founder, Jane Doe, started this
         bakery with a dream to share her love of baking with the world. 
         Over the years, we have grown and evolved, but our commitment to
