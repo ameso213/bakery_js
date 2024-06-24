@@ -1,0 +1,70 @@
+.navbar {
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #e9e8e4; /* Faint background color for bakery theme */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  color: #8b4513;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 15px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  color: #8b4513; /* Saddle Brown color on hover */
+}
+
+.nav-link.active {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 0 10px;
+  }
+
+  .nav-item {
+      margin-left: 10px;
+  }
+
+  .navbar-brand {
+      font-size: 1.5rem;
+  }
+
+  .nav-link {
+      font-size: 1rem;
+  }
+}
