@@ -1,52 +1,60 @@
 .footer {
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .footer p {
-    margin: 10px 0;
-    color: #000; /* Solid black color */
-  }
-  
-  .social-media-links {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    margin-bottom: 5px;
-  }
-  
-  .social-media-icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    margin: 0 15px; /* Adjust horizontal spacing between icons */
-  }
-  
-  .social-media-icon {
-    width: auto; /* Auto width to maintain aspect ratio */
-    max-height: 25px; /* Maximum height for all icons */
-    margin-bottom: 5px; /* Spacing between icon and username */
-  }
-  
-  .social-media-icon.twitter-icon {
-    max-height: 20px; /* Specific height for Twitter icon */
-  }
-  
-  .icon-username {
-    font-size: 14px; /* Adjust font size as needed */
-    color: #666; /* Light gray color for usernames */
-  }
-  
-  .location-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .location-icon {
-    width: 40px; /* Adjust size of location icon */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Spacing between icon and text */
-  }
-  
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+  position: fixed; /* Fixed position to keep it at the bottom */
+  bottom: 0; /* Align to the bottom of the viewport */
+  left: 0; /* Align to the left edge of the viewport */
+  width: 100%; /* Full width of the viewport */
+  box-sizing: border-box; /* Include padding and border in the width */
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.footer p {
+  margin: 10px 0;
+  color: white; /* Set paragraph text color to white */
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  margin-bottom: 5px;
+}
+
+.social-media-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+  margin: 0 15px; /* Adjust horizontal spacing between icons */
+}
+
+.social-media-icon {
+  width: auto; /* Auto width to maintain aspect ratio */
+  max-height: 25px; /* Maximum height for all icons */
+  margin-bottom: 5px; /* Spacing between icon and username */
+}
+
+.social-media-icon.twitter-icon {
+  max-height: 20px; /* Specific height for Twitter icon */
+}
+
+.icon-username {
+  font-size: 14px; /* Adjust font size as needed */
+  color: #ccc; /* Light gray color for usernames */
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.location-icon {
+  width: 40px; /* Adjust size of location icon */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Spacing between icon and text */
+  filter: invert(100%); /* Invert icon color to appear white on black background */
+}

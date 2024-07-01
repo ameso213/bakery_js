@@ -43,11 +43,7 @@ const Navbar = () => {
               Login
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/noPage" className="nav-link">
-              NoPage
-            </Link>
-          </li>
+          
         </ul>
       </div>
     </nav>

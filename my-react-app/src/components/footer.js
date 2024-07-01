@@ -1,9 +1,9 @@
 import React from 'react';
 import './footer.css'; 
 import facebookLogo from './fb.png';
-import twitterLogo from './xxx.png';
+import twitterLogo from './twit.png';
 import instagramLogo from './igg.png';
-import emailLogo from './email.png';
+import emailLogo from './emaail.png';
 import locationLogo from './location.png'; 
 
 const Footer = () => (

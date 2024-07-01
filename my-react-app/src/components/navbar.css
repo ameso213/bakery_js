@@ -1,7 +1,12 @@
 .navbar {
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #e9e8e4; /* Faint background color for bakery theme */
+  padding: 20px 0; /* Match padding of the footer */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixed position to keep it at the top */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left edge of the viewport */
+  width: 100%; /* Full width of the viewport */
+  z-index: 1000; /* Ensure it's on top of other content */
 }
 
 .container {
@@ -10,12 +15,12 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; /* Match padding of the footer */
 }
 
 .navbar-brand {
   font-size: 1.8rem;
-  color: #8b4513;
+  color: #8b4513; /* Brown color for bakery theme */
   text-decoration: none;
 }
 
@@ -23,7 +28,6 @@
   opacity: 0.8;
 }
 
-/* Navbar Links */
 .navbar-nav {
   list-style-type: none;
   margin: 0;
@@ -37,7 +41,7 @@
 
 .nav-link {
   font-size: 1.1rem;
-  color: #333;
+  color: #333; /* Dark gray color for links */
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 5px;
@@ -48,23 +52,33 @@
 }
 
 .nav-link.active {
-  color: #fff;
+  color: #fff; /* White color for active link */
+  background-color: #8b4513; /* Saddle Brown background for active link */
 }
 
 @media (max-width: 768px) {
   .container {
-      padding: 0 10px;
+    padding: 0 10px; /* Match padding of the footer */
   }
 
   .nav-item {
-      margin-left: 10px;
+    margin-left: 10px;
   }
 
   .navbar-brand {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .nav-link {
-      font-size: 1rem;
+    font-size: 1rem;
   }
+}
+
+/* Increase font size and give dark orange color to words */
+.navbar-brand,
+.nav-link,
+.nav-link.active {
+  font-size: 1.3rem; /* Increase font size */
+  color: #d2691e; /* Dark orange color */
+  font-weight: bold; /* Bold font weight */
 }

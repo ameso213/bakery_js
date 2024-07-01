@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './components/home';
 import Products from './components/products';
-import Contact from './components/contacts';
+import Contact from './components/contacts'; 
 import Checkout from './components/checkOut';
 import AboutUs from './components/aboutUs';
-import NoPage from './components/noPage';
+
 import Login from './components/login';
 import Blog from './components/blogs';
 import Footer from './components/footer';
-
 
 const App = () => {
   return (
@@ -22,14 +21,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/checkOut" element={<Checkout />} />
+          <Route path="/contact" element={<Contact />} /> {/* Route for Contact component */}
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/blogs" element={<Blog />} />
-          <Route path="/login" element={<Login />} /> {/* Add this route for Login */}
-          <Route path="*" element={<NoPage />} /> {/* Render NoPage for unmatched routes */}
+          <Route path="/login" element={<Login />} /> {/* Route for Login component */}
+          
         </Routes>
-        
-        
         
         <Footer /> {/* Include the Footer component */}
       </div>
