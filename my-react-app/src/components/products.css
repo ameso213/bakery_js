@@ -40,3 +40,18 @@ p {
   color: #666;
   font-size: 1.2rem;
 }
+
+/* Style for the "Add to Cart" button */
+.product-card button {
+  background-color: #87CEEB; /* Sky blue background */
+  border: 1px solid #D4AF37; /* Dull gold border color */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #5f9ea0; /* Darker shade of sky blue on hover */
+}

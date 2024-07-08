@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './checkOut.css';
+
 const Checkout = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -7,9 +8,9 @@ const Checkout = () => {
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
-  const [zipCode, setZipCode] = useState('');
   const [country, setCountry] = useState('');
   const [notes, setNotes] = useState('');
+  const [orderSubmitted, setOrderSubmitted] = useState(false); // State for order submission status
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +22,6 @@ const Checkout = () => {
       phone,
       address,
       city,
-      zipCode,
       country,
       notes
     });
@@ -32,9 +32,14 @@ const Checkout = () => {
     setPhone('');
     setAddress('');
     setCity('');
-    setZipCode('');
     setCountry('');
     setNotes('');
+    // Set orderSubmitted to true to display the notification
+    setOrderSubmitted(true);
+    // Optionally, you can reset orderSubmitted after a timeout to hide the notification
+    setTimeout(() => {
+      setOrderSubmitted(false);
+    }, 5000); // Hide notification after 5 seconds (adjust as needed)
   };
 
   return (
@@ -101,28 +106,9 @@ const Checkout = () => {
             required
           />
         </div>
+        
         <div className="form-group">
-          <label htmlFor="zipCode">ZIP Code:</label>
-          <input
-            type="text"
-            id="zipCode"
-            value={zipCode}
-            onChange={(e) => setZipCode(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="country">Country:</label>
-          <input
-            type="text"
-            id="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="notes">Notes:</label>
+          <label htmlFor="notes">Comment:</label>
           <textarea
             id="notes"
             rows="4"
@@ -132,6 +118,12 @@ const Checkout = () => {
         </div>
         <button type="submit" className="btn-submit">Place Order</button>
       </form>
+      {/* Display success message if orderSubmitted is true */}
+      {orderSubmitted && (
+        <div className="success-message">
+          Your order is submitted successfully!
+        </div>
+      )}
     </div>
   );
 };

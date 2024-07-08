@@ -1,5 +1,5 @@
-// Define an object to manage the cart
-let cart = {
+// Define an object to manage the bakery cart
+let bakeryCart = {
     items: [],
   
     // Function to add items to the cart
@@ -51,7 +51,7 @@ let cart = {
     // Function to display cart contents
     displayCart() {
       // Output cart contents to console (example implementation)
-      console.log("Cart Contents:");
+      console.log("Bakery Cart Contents:");
       this.items.forEach(item => {
         console.log(`${item.name} - $${item.price.toFixed(2)} x ${item.quantity}`);
       });
@@ -59,12 +59,6 @@ let cart = {
     }
   };
   
-  // Example usage:
-  cart.addToCart("Chocolate Croissant", 3.50, 2); // Add 2 Chocolate Croissants to cart
-  cart.addToCart("Blueberry Muffin", 2.75, 1);    // Add 1 Blueberry Muffin to cart
-  cart.removeFromCart("Chocolate Croissant");     // Remove Chocolate Croissant from cart
-  cart.updateQuantity("Blueberry Muffin", 3);     // Update quantity of Blueberry Muffin to 3
-  
-  // Display cart contents after operations
-  cart.displayCart();
+  // Export the bakeryCart object to be used in other modules
+  export default bakeryCart;
   

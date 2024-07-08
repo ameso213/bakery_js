@@ -1,5 +1,6 @@
 import React from 'react';
 import './products.css';
+import bakeryCart from './carts'; // Import bakeryCart module
 
 const products = [
   {
@@ -69,16 +70,23 @@ const Products = () => {
   const ourProducts = products.slice(0, 6);
   const otherProducts = products.slice(6);
 
+  // Function to add items to the cart
+  const addToCart = (itemName, price) => {
+    bakeryCart.addToCart(itemName, parseFloat(price.replace('$', '')), 1); // Assuming quantity is 1 for each add to cart
+    alert(`${itemName} added to cart!`);
+  };
+
   return (
     <div className="products-container">
       <div className="our-products">
         <h1>Our Products</h1>
         <div className="products-list">
           {ourProducts.map((product, index) => (
-            <div key={index} className="product-card">
+            <div key={index} className="product-card" onClick={() => addToCart(product.name, product.price)}>
               <img src={product.image} alt={product.name} className="product-image" />
               <h2>{product.name}</h2>
               <p>{product.price}</p>
+              <button onClick={(e) => {e.stopPropagation(); addToCart(product.name, product.price)}}>Add to Cart</button>
             </div>
           ))}
         </div>
@@ -88,10 +96,11 @@ const Products = () => {
         <h1>Other Products</h1>
         <div className="products-list">
           {otherProducts.map((product, index) => (
-            <div key={index} className="product-card">
+            <div key={index} className="product-card" onClick={() => addToCart(product.name, product.price)}>
               <img src={product.image} alt={product.name} className="product-image" />
               <h2>{product.name}</h2>
               <p>{product.price}</p>
+              <button onClick={(e) => {e.stopPropagation(); addToCart(product.name, product.price)}}>Add to Cart</button>
             </div>
           ))}
         </div>
