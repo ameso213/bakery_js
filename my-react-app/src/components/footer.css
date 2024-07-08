@@ -1,20 +1,15 @@
+
+
 .footer {
   padding: 20px;
+  position: fixed;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black; /* Set background color to black */
-  color: white; /* Set text color to white */
-  position: fixed; /* Fixed position to keep it at the bottom */
-  bottom: 0; /* Align to the bottom of the viewport */
-  left: 0; /* Align to the left edge of the viewport */
-  width: 100%; /* Full width of the viewport */
-  box-sizing: border-box; /* Include padding and border in the width */
-  z-index: 1000; /* Ensure it's on top of other content */
 }
 
 .footer p {
   margin: 10px 0;
-  color: white; /* Set paragraph text color to white */
+  color: #000; /* Solid black color */
 }
 
 .social-media-links {
@@ -42,7 +37,7 @@
 
 .icon-username {
   font-size: 14px; /* Adjust font size as needed */
-  color: #ccc; /* Light gray color for usernames */
+  color: #666; /* Light gray color for usernames */
 }
 
 .location-info {
@@ -56,5 +51,4 @@
   width: 40px; /* Adjust size of location icon */
   height: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Spacing between icon and text */
-  filter: invert(100%); /* Invert icon color to appear white on black background */
 }

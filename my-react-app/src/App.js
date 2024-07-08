@@ -9,7 +9,6 @@ import AboutUs from './components/aboutUs';
 
 import Login from './components/login';
 import Blog from './components/blogs';
-import Footer from './components/footer';
 
 const App = () => {
   return (
@@ -28,7 +27,7 @@ const App = () => {
           
         </Routes>
         
-        <Footer /> {/* Include the Footer component */}
+         {/* Include the Footer component */}
       </div>
     </Router>
   );
