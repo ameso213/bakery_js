@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './login.css';
+import CreateAccount from './account'; // Import CreateAccount component
+import './login.css'; // Import login.css for styling
 
 const UserAccount = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
+  const [showCreateAccount, setShowCreateAccount] = useState(false); // State to toggle CreateAccount form
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [robotVerified, setRobotVerified] = useState(false);
@@ -11,16 +13,14 @@ const UserAccount = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    
     if (!robotVerified) {
       showNotification('Please verify that you are not a robot.');
       return;
     }
-
     // Simulated authentication logic
     setTimeout(() => {
       setIsLoggedIn(true);
-      setUser({ name: 'John Doe', orders: [{ id: 1, product: 'Bread', date: '2024-06-25' }] });
+      setUser({ name: 'Recho Namara', orders: [{ id: 1, product: 'Bread', date: '2024-06-25' }] });
       showNotification('Login successful.');
     }, 2000);
   };
@@ -40,21 +40,19 @@ const UserAccount = () => {
     showNotification('You are verified as not a robot.');
   };
 
-  const handleSignUp = () => {
-    showNotification('Redirect to Sign Up page or form.');
-    // Implement navigation to sign up page or form
+  const handleShowCreateAccount = () => {
+    setShowCreateAccount(true); // Show CreateAccount form
   };
 
   const showNotification = (message) => {
-    // Replace with your preferred notification method (e.g., toast, alert component)
-    alert(message);
+    alert(message); // Replace with your preferred notification method
   };
 
   return (
-    <div className="login-container">
+    <div className="user-account">
       {isLoggedIn ? (
         <div>
-          <h1>Welcome, {user.name}</h1>
+          <h1>Thank you for choosing us! {user.name}</h1>
           <h2>Order History</h2>
           <ul>
             {user.orders.map(order => (
@@ -100,7 +98,7 @@ const UserAccount = () => {
           </form>
           <div className="login-links">
             <a href="#" className="link" onClick={handleForgotPassword}>Forgot Password?</a>
-            <a href="#" className="link" onClick={handleSignUp}>Create Account</a>
+            <a href="#" onClick={handleShowCreateAccount} className="link-button">Create Account</a>
           </div>
           <div className="terms-conditions">
             <a href="#terms" className="link" onClick={() => showNotification(`
@@ -111,6 +109,7 @@ const UserAccount = () => {
               5. Limitation of Liability: We are not liable for any indirect, incidental, or consequential damages arising from the use of our service.
             `)}>Terms and Conditions</a>
           </div>
+          {showCreateAccount && <CreateAccount />} {/* Conditionally render CreateAccount component */}
         </div>
       )}
     </div>

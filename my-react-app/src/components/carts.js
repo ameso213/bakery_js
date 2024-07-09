@@ -1,5 +1,5 @@
 // Define an object to manage the bakery cart
-let bakeryCart = {
+let BakeryCart = {
     items: [],
   
     // Function to add items to the cart
@@ -60,5 +60,5 @@ let bakeryCart = {
   };
   
   // Export the bakeryCart object to be used in other modules
-  export default bakeryCart;
+  export default BakeryCart;
   

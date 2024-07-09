@@ -1,0 +1,60 @@
+/* account.css */
+
+.create-account-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #d2691e;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-account-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-create-account {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-create-account:hover {
+    background-color: #0056b3;
+  }
+  
+  .create-account-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .terms-conditions {
+    margin-top: 20px;
+  }
+  

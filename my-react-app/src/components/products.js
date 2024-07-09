@@ -1,7 +1,6 @@
 import React from 'react';
 import './products.css';
-import bakeryCart from './carts'; // Import bakeryCart module
-
+import BakeryCart from './carts'; 
 const products = [
   {
     name: 'Classic White Wedding Cake',
@@ -72,7 +71,7 @@ const Products = () => {
 
   // Function to add items to the cart
   const addToCart = (itemName, price) => {
-    bakeryCart.addToCart(itemName, parseFloat(price.replace('$', '')), 1); // Assuming quantity is 1 for each add to cart
+    BakeryCart.addToCart(itemName, parseFloat(price.replace('$', '')), 1); // Assuming quantity is 1 for each add to cart
     alert(`${itemName} added to cart!`);
   };
 
