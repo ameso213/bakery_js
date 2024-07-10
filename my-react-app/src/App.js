@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
@@ -9,6 +10,7 @@ import AboutUs from './components/aboutUs';
 import Login from './components/login';
 import Blog from './components/blogs';
 import BakeryCart from './components/carts'; // Adjust the path as per your project structure
+import Footer from './components/footer'; // Adjust the path as per your project structure
 
 const App = () => {
   return (
@@ -26,8 +28,7 @@ const App = () => {
           
           <Route path="/login" element={<Login />} />
         </Routes>
-        
-        {/* Footer component can be included here or within each component if it's consistent across all pages */}
+        <Footer /> {/* Include the Footer component */}
       </div>
     </Router>
   );
